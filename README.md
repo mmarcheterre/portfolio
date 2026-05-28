@@ -15,8 +15,9 @@ portfolio/
 
 ## Sections
 
-- Hero — Présentation avec appels à l'action
+- Hero — Présentation et appels à l'action
 - À propos — Présentation et informations de contact
+- Services — Sites web, Flask, intégration d'APIs
 - Compétences — Grille par catégories
 - Expérience — Timeline verticale
 - Projets — Cartes avec liens GitHub

@@ -18,11 +18,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
 
   <nav class="navbar" id="navbar">
     <span class="logo">M.Marcheterre</span>
-    <ul class="nav-links">
+    <ul class="nav-links" id="primary-navigation">
       <li><a href="#about">À propos</a></li>
+      <li><a href="#services">Services</a></li>
       <li><a href="#skills">Compétences</a></li>
       <li><a href="#experience">Expérience</a></li>
       <li><a href="#projects">Projets</a></li>
@@ -40,10 +42,10 @@
       </div>
       <p class="hero-subtitle">Développeur Web Full-Stack</p>
       <h1 class="hero-title">M. Marcheterre</h1>
-      <p class="hero-desc">Passionné par le développement web, les APIs et les solutions créatives.<br>Basé à Montréal, Québec.</p>
+      <p class="hero-desc">Je conçois des sites web modernes et des applications Flask performantes, pensées pour être claires, rapides et évolutives.</p>
       <div class="hero-btns">
         <a href="#projects" class="btn btn-primary">Voir mes projets</a>
-        <a href="#contact" class="btn btn-outline">Me contacter</a>
+        <a href="#services" class="btn btn-outline">Mes services</a>
       </div>
     </div>
     <div class="hero-scroll">
@@ -63,7 +65,7 @@
               performantes et accessibles.
             </p>
             <p>
-              En dehors du code, j'étudie, je construis et développe des projets qui combinent sport, technologie et autres.
+              Je travaille sur des projets concrets, du site vitrine à l'application dynamique, avec une attention particulière à la qualité du code, à l'expérience utilisateur et au déploiement.
             </p>
             <a href="cv.pdf" class="btn btn-primary about-cta" target="_blank" rel="noopener">Télécharger mon CV</a>
           </div>
@@ -72,14 +74,37 @@
               <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Montréal, Québec</li>
               <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:ymarcheterre@gmail.com">ymarcheterre@gmail.com</a></li>
               <li><i class="fab fa-github" aria-hidden="true"></i> <a href="https://github.com/mmarcheterre" target="_blank" rel="noopener">mmarcheterre</a></li>
-              <li><i class="fas fa-briefcase" aria-hidden="true"></i> Disponible pour projets</li>
+              <li><i class="fas fa-briefcase" aria-hidden="true"></i> Disponible pour projets web et Flask</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="skills" class="section section-alt">
+    <section id="services" class="section section-alt">
+      <div class="section-inner">
+        <h2 class="section-title">Services</h2>
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon"><i class="fas fa-laptop-code" aria-hidden="true"></i></div>
+            <h3>Sites web modernes</h3>
+            <p>Création de sites vitrines propres, rapides et responsive pour entreprises, projets personnels ou présence professionnelle en ligne.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon"><i class="fas fa-flask" aria-hidden="true"></i></div>
+            <h3>Applications Flask</h3>
+            <p>Développement d'applications web en Python Flask avec structure claire, logique backend solide et interface simple à faire évoluer.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon"><i class="fas fa-plug" aria-hidden="true"></i></div>
+            <h3>Intégration d'APIs</h3>
+            <p>Connexion à des APIs tierces pour afficher des données dynamiques, automatiser des actions ou enrichir une application existante.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
       <div class="section-inner">
         <h2 class="section-title">Compétences</h2>
         <div class="skills-grid">
@@ -104,21 +129,21 @@
           <div class="skill-category">
             <h3>Autres</h3>
             <div class="skill-tags">
-              <span>GitHub Actions</span><span>Accessibilité WCAG</span>
+              <span>GitHub Actions</span><span>Accessibilité WCAG</span><span>Déploiement</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="experience" class="section">
+    <section id="experience" class="section section-alt">
       <div class="section-inner">
         <h2 class="section-title">Expérience</h2>
         <div class="timeline">
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <span class="timeline-date">2026 – Présent</span>
+              <span class="timeline-date">2024 – Présent</span>
               <h3>Développeur Web Full-Stack</h3>
               <p class="timeline-company">Projets personnels & open source</p>
               <p>Conception et développement de plusieurs applications web, dont des projets Flask, des intégrations d'API et des sites vitrine.</p>
@@ -127,7 +152,7 @@
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <span class="timeline-date">2026</span>
+              <span class="timeline-date">2024</span>
               <h3>Site Web — CSDR</h3>
               <p class="timeline-company">Westbury, Estrie</p>
               <p>Développement complet d'un site vitrine pour une entreprise locale de systèmes d'alarme et de sécurité.</p>
@@ -146,32 +171,39 @@
       </div>
     </section>
 
-    <section id="projects" class="section section-alt">
+    <section id="projects" class="section">
       <div class="section-inner">
         <h2 class="section-title">Projets</h2>
         <div class="projects-grid">
-          <article class="card">
+          <article class="card featured-project">
+            <div class="project-badge">Projet phare</div>
             <div class="card-icon"><i class="fas fa-hockey-puck" aria-hidden="true"></i></div>
             <h3>CH Dashboard</h3>
-            <p>Tableau de bord statistiques du Canadien de Montréal. Intègre l'API NHL, Flask et une interface dynamique.</p>
+            <p>Tableau de bord statistique autour du Canadien de Montréal, avec intégration de l'API NHL et interface dynamique pensée pour une lecture rapide des données.</p>
             <div class="card-tags">
               <span>Python</span><span>Flask</span><span>NHL API</span>
+            </div>
+            <div class="card-links">
+              <a href="https://github.com/mmarcheterre/ch-dashboard" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
             </div>
           </article>
 
           <article class="card">
             <div class="card-icon"><i class="fas fa-shield-alt" aria-hidden="true"></i></div>
             <h3>Site CSDR</h3>
-            <p>Site vitrine pour une entreprise de sécurité locale. Responsive, optimisé et mis en ligne sur Render.</p>
+            <p>Site vitrine pour une entreprise de sécurité locale, conçu pour présenter clairement les services et améliorer la présence web de l'entreprise.</p>
             <div class="card-tags">
               <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="card-links">
+              <a href="https://github.com/mmarcheterre/csdr" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
             </div>
           </article>
 
           <article class="card">
             <div class="card-icon"><i class="fas fa-code" aria-hidden="true"></i></div>
             <h3>Portfolio</h3>
-            <p>Ce site même, conçu et développé en HTML, CSS et JavaScript vanilla, prêt pour GitHub Pages.</p>
+            <p>Ce site même, conçu et développé en HTML, CSS et JavaScript vanilla, avec une structure légère et prête pour GitHub Pages.</p>
             <div class="card-tags">
               <span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span>
             </div>
@@ -183,10 +215,10 @@
       </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact" class="section section-alt">
       <div class="section-inner contact-inner">
         <h2 class="section-title">Contact</h2>
-        <p class="contact-desc">Intéressé à collaborer ? N'hésite pas à m'écrire.</p>
+        <p class="contact-desc">Tu as un projet web, une application Flask ou une idée à développer ? Écris-moi.</p>
         <form class="contact-form" action="https://formspree.io/f/xanoyrwj" method="POST">
           <div class="form-row">
             <input type="text" name="name" placeholder="Votre nom" required>
@@ -205,7 +237,7 @@
   </main>
 
   <footer class="footer">
-    <p>© 2026 M. Marcheterre — Fait avec <i class="fas fa-heart" style="color:#e74c3c" aria-hidden="true"></i> à Montréal</p>
+    <p>© 2026 M. Marcheterre — Développeur web à Montréal</p>
   </footer>
 
   <script src="script.js"></script>
