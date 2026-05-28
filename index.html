@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio de M. Marcheterre, développeur web full-stack basé à Montréal. Projets Flask, APIs, interfaces web et solutions modernes.">
+  <meta name="description" content="Portfolio de Marian Marcheterre, développeur web full-stack basé à Montréal. Sites web modernes, applications Flask et intégration d'APIs.">
   <meta name="theme-color" content="#1e3c72">
-  <meta property="og:title" content="M. Marcheterre — Portfolio">
-  <meta property="og:description" content="Développeur web full-stack à Montréal. Découvrez mes projets, compétences et expériences.">
+  <meta property="og:title" content="Marian Marcheterre — Développeur Web Full-Stack">
+  <meta property="og:description" content="Développeur web full-stack à Montréal. Sites modernes, Flask, APIs. Découvrez mes projets.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mmarcheterre.github.io/portfolio/">
-  <title>M. Marcheterre — Portfolio</title>
+  <title>Marian Marcheterre — Portfolio</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,14 +21,15 @@
   <a class="skip-link" href="#main-content">Aller au contenu</a>
 
   <nav class="navbar" id="navbar">
-    <span class="logo">M.Marcheterre</span>
+    <span class="logo">Marian.dev</span>
     <ul class="nav-links" id="primary-navigation">
       <li><a href="#about">À propos</a></li>
+      <li><a href="#stats">Chiffres</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#skills">Compétences</a></li>
       <li><a href="#experience">Expérience</a></li>
       <li><a href="#projects">Projets</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="nav-cta">Me contacter</a></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-navigation">
       <i class="fas fa-bars" aria-hidden="true"></i>
@@ -38,49 +39,102 @@
   <header class="hero" id="home">
     <div class="hero-content">
       <div class="hero-avatar" aria-hidden="true">
-        <span class="avatar-initials">M.M</span>
+        <span class="avatar-initials">MM</span>
       </div>
-      <p class="hero-subtitle">Développeur Web Full-Stack</p>
-      <h1 class="hero-title">M. Marcheterre</h1>
-      <p class="hero-desc">Je conçois des sites web modernes et des applications Flask performantes, pensées pour être claires, rapides et évolutives.</p>
+      <p class="hero-subtitle">Développeur Web Full-Stack · Montréal</p>
+      <h1 class="hero-title">Marian Marcheterre</h1>
+      <p class="hero-desc">Je conçois des sites web modernes et des applications Flask performantes — propres, rapides et pensées pour durer.</p>
       <div class="hero-btns">
-        <a href="#projects" class="btn btn-primary">Voir mes projets</a>
-        <a href="#services" class="btn btn-outline">Mes services</a>
+        <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket" aria-hidden="true"></i> Voir mes projets</a>
+        <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope" aria-hidden="true"></i> Me contacter</a>
       </div>
     </div>
     <div class="hero-scroll">
-      <a href="#about" aria-label="Descendre vers la section À propos"><i class="fas fa-chevron-down" aria-hidden="true"></i></a>
+      <a href="#about" aria-label="Descendre"><i class="fas fa-chevron-down" aria-hidden="true"></i></a>
     </div>
   </header>
 
   <main id="main-content">
+
+    <!-- À PROPOS -->
     <section id="about" class="section">
       <div class="section-inner">
         <h2 class="section-title">À propos</h2>
         <div class="about-grid">
           <div class="about-text">
             <p>
-              Je suis développeur web full-stack basé à Montréal, spécialisé en <strong>Python Flask</strong>,
-              <strong>JavaScript</strong> et intégration d'APIs REST. J'aime créer des applications web propres,
-              performantes et accessibles.
+              Bonjour, je suis <strong>Marian</strong>, développeur web full-stack basé à Montréal.
+              Je me spécialise en <strong>Python Flask</strong>, <strong>JavaScript</strong> et intégration d'APIs REST.
+              Mon objectif : livrer des solutions claires, bien structurées et faciles à faire évoluer.
             </p>
             <p>
-              Je travaille sur des projets concrets, du site vitrine à l'application dynamique, avec une attention particulière à la qualité du code, à l'expérience utilisateur et au déploiement.
+              Je travaille aussi bien sur des sites vitrines que des applications dynamiques,
+              avec une attention constante à la qualité du code, la performance et l'expérience utilisateur.
             </p>
-            <a href="cv.pdf" class="btn btn-primary about-cta" target="_blank" rel="noopener">Télécharger mon CV</a>
+            <a href="cv.pdf" class="btn btn-primary about-cta" target="_blank" rel="noopener">
+              <i class="fas fa-file-pdf" aria-hidden="true"></i> Télécharger mon CV
+            </a>
           </div>
           <div class="about-info">
             <ul class="info-list">
+              <li><i class="fas fa-user" aria-hidden="true"></i> Marian Marcheterre</li>
               <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Montréal, Québec</li>
               <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:ymarcheterre@gmail.com">ymarcheterre@gmail.com</a></li>
               <li><i class="fab fa-github" aria-hidden="true"></i> <a href="https://github.com/mmarcheterre" target="_blank" rel="noopener">mmarcheterre</a></li>
-              <li><i class="fas fa-briefcase" aria-hidden="true"></i> Disponible pour projets web et Flask</li>
+              <li><i class="fas fa-circle-dot" aria-hidden="true"></i> <span class="available-badge">Disponible pour nouveaux projets</span></li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- CHIFFRES CLÉS -->
+    <section id="stats" class="section stats-section">
+      <div class="section-inner">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-number" data-target="3">0</span>
+            <span class="stat-label">Projets livrés</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="2">0</span>
+            <span class="stat-label">Clients satisfaits</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="100">0</span>
+            <span class="stat-label">% Responsive</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="6">0</span>
+            <span class="stat-label">Technos maîtrisées</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BANDEAU TECHNO -->
+    <div class="tech-banner" aria-label="Technologies utilisées">
+      <div class="tech-track">
+        <span><i class="fab fa-python" aria-hidden="true"></i> Python</span>
+        <span><i class="fas fa-flask" aria-hidden="true"></i> Flask</span>
+        <span><i class="fab fa-html5" aria-hidden="true"></i> HTML5</span>
+        <span><i class="fab fa-css3-alt" aria-hidden="true"></i> CSS3</span>
+        <span><i class="fab fa-js" aria-hidden="true"></i> JavaScript</span>
+        <span><i class="fab fa-github" aria-hidden="true"></i> GitHub</span>
+        <span><i class="fas fa-vial" aria-hidden="true"></i> pytest</span>
+        <span><i class="fas fa-cloud" aria-hidden="true"></i> Render</span>
+        <span><i class="fab fa-python" aria-hidden="true"></i> Python</span>
+        <span><i class="fas fa-flask" aria-hidden="true"></i> Flask</span>
+        <span><i class="fab fa-html5" aria-hidden="true"></i> HTML5</span>
+        <span><i class="fab fa-css3-alt" aria-hidden="true"></i> CSS3</span>
+        <span><i class="fab fa-js" aria-hidden="true"></i> JavaScript</span>
+        <span><i class="fab fa-github" aria-hidden="true"></i> GitHub</span>
+        <span><i class="fas fa-vial" aria-hidden="true"></i> pytest</span>
+        <span><i class="fas fa-cloud" aria-hidden="true"></i> Render</span>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
     <section id="services" class="section section-alt">
       <div class="section-inner">
         <h2 class="section-title">Services</h2>
@@ -88,54 +142,57 @@
           <article class="service-card">
             <div class="service-icon"><i class="fas fa-laptop-code" aria-hidden="true"></i></div>
             <h3>Sites web modernes</h3>
-            <p>Création de sites vitrines propres, rapides et responsive pour entreprises, projets personnels ou présence professionnelle en ligne.</p>
+            <p>Création de sites vitrines propres, rapides et responsive. Design soigné, code structuré, prêt à être mis en ligne.</p>
           </article>
-          <article class="service-card">
+          <article class="service-card featured-service">
+            <div class="service-badge">Spécialité</div>
             <div class="service-icon"><i class="fas fa-flask" aria-hidden="true"></i></div>
             <h3>Applications Flask</h3>
-            <p>Développement d'applications web en Python Flask avec structure claire, logique backend solide et interface simple à faire évoluer.</p>
+            <p>Développement d'applications web en Python Flask, avec logique backend solide, structure claire et interface évolutive.</p>
           </article>
           <article class="service-card">
             <div class="service-icon"><i class="fas fa-plug" aria-hidden="true"></i></div>
             <h3>Intégration d'APIs</h3>
-            <p>Connexion à des APIs tierces pour afficher des données dynamiques, automatiser des actions ou enrichir une application existante.</p>
+            <p>Connexion à des APIs tierces pour afficher des données dynamiques, automatiser des actions ou enrichir une application.</p>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- COMPÉTENCES -->
     <section id="skills" class="section">
       <div class="section-inner">
         <h2 class="section-title">Compétences</h2>
         <div class="skills-grid">
           <div class="skill-category">
-            <h3>Frontend</h3>
+            <h3><i class="fas fa-paint-brush" aria-hidden="true"></i> Frontend</h3>
             <div class="skill-tags">
               <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive Design</span>
             </div>
           </div>
           <div class="skill-category">
-            <h3>Backend</h3>
+            <h3><i class="fas fa-server" aria-hidden="true"></i> Backend</h3>
             <div class="skill-tags">
               <span>Python</span><span>Flask</span><span>REST API</span>
             </div>
           </div>
           <div class="skill-category">
-            <h3>Outils</h3>
+            <h3><i class="fas fa-tools" aria-hidden="true"></i> Outils</h3>
             <div class="skill-tags">
               <span>Git</span><span>GitHub</span><span>VS Code</span><span>Render</span><span>pytest</span><span>mypy</span>
             </div>
           </div>
           <div class="skill-category">
-            <h3>Autres</h3>
+            <h3><i class="fas fa-shield-alt" aria-hidden="true"></i> Qualité</h3>
             <div class="skill-tags">
-              <span>GitHub Actions</span><span>Accessibilité WCAG</span><span>Déploiement</span>
+              <span>GitHub Actions</span><span>Accessibilité WCAG</span><span>Sécurité web</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- EXPÉRIENCE -->
     <section id="experience" class="section section-alt">
       <div class="section-inner">
         <h2 class="section-title">Expérience</h2>
@@ -146,7 +203,7 @@
               <span class="timeline-date">2024 – Présent</span>
               <h3>Développeur Web Full-Stack</h3>
               <p class="timeline-company">Projets personnels & open source</p>
-              <p>Conception et développement de plusieurs applications web, dont des projets Flask, des intégrations d'API et des sites vitrine.</p>
+              <p>Conception et développement de plusieurs applications web, dont des projets Flask, des intégrations d'API sportives et des sites vitrines.</p>
             </div>
           </div>
           <div class="timeline-item">
@@ -161,16 +218,17 @@
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <span class="timeline-date">Formation</span>
+              <span class="timeline-date">Formation continue</span>
               <h3>Développement Web & IA</h3>
-              <p class="timeline-company">Formation continue</p>
-              <p>Apprentissage avancé en Flask, tests unitaires, CI/CD avec GitHub Actions et sécurité web.</p>
+              <p class="timeline-company">Auto-formation avancée</p>
+              <p>Flask avancé, tests unitaires avec pytest, CI/CD via GitHub Actions, sécurité web et accessibilité WCAG.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- PROJETS -->
     <section id="projects" class="section">
       <div class="section-inner">
         <h2 class="section-title">Projets</h2>
@@ -179,7 +237,7 @@
             <div class="project-badge">Projet phare</div>
             <div class="card-icon"><i class="fas fa-hockey-puck" aria-hidden="true"></i></div>
             <h3>CH Dashboard</h3>
-            <p>Tableau de bord statistique autour du Canadien de Montréal, avec intégration de l'API NHL et interface dynamique pensée pour une lecture rapide des données.</p>
+            <p>Tableau de bord statistique du Canadien de Montréal, avec intégration de l'API NHL et interface dynamique pensée pour une lecture rapide.</p>
             <div class="card-tags">
               <span>Python</span><span>Flask</span><span>NHL API</span>
             </div>
@@ -191,7 +249,7 @@
           <article class="card">
             <div class="card-icon"><i class="fas fa-shield-alt" aria-hidden="true"></i></div>
             <h3>Site CSDR</h3>
-            <p>Site vitrine pour une entreprise de sécurité locale, conçu pour présenter clairement les services et améliorer la présence web de l'entreprise.</p>
+            <p>Site vitrine pour une entreprise de sécurité locale, conçu pour présenter clairement les services et renforcer la présence web.</p>
             <div class="card-tags">
               <span>HTML</span><span>CSS</span><span>JavaScript</span>
             </div>
@@ -203,7 +261,7 @@
           <article class="card">
             <div class="card-icon"><i class="fas fa-code" aria-hidden="true"></i></div>
             <h3>Portfolio</h3>
-            <p>Ce site même, conçu et développé en HTML, CSS et JavaScript vanilla, avec une structure légère et prête pour GitHub Pages.</p>
+            <p>Ce site même — conçu en HTML, CSS et JavaScript vanilla, léger, accessible et hébergé sur GitHub Pages.</p>
             <div class="card-tags">
               <span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span>
             </div>
@@ -215,18 +273,19 @@
       </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact" class="section section-alt">
       <div class="section-inner contact-inner">
-        <h2 class="section-title">Contact</h2>
-        <p class="contact-desc">Tu as un projet web, une application Flask ou une idée à développer ? Écris-moi.</p>
+        <h2 class="section-title">Travaillons ensemble</h2>
+        <p class="contact-desc">Tu as un projet web, une application Flask à développer ou une idée à concrétiser ? Je suis disponible — écris-moi directement.</p>
         <form class="contact-form" action="https://formspree.io/f/xanoyrwj" method="POST">
           <div class="form-row">
-            <input type="text" name="name" placeholder="Votre nom" required>
-            <input type="email" name="email" placeholder="Votre courriel" required>
+            <input type="text" name="name" placeholder="Votre nom" required autocomplete="name">
+            <input type="email" name="email" placeholder="Votre courriel" required autocomplete="email">
           </div>
           <input type="text" name="subject" placeholder="Sujet" required>
-          <textarea name="message" rows="5" placeholder="Votre message..." required></textarea>
-          <button type="submit" class="btn btn-primary">Envoyer <i class="fas fa-paper-plane" aria-hidden="true"></i></button>
+          <textarea name="message" rows="5" placeholder="Décrivez votre projet ou votre besoin..." required></textarea>
+          <button type="submit" class="btn btn-primary">Envoyer le message <i class="fas fa-paper-plane" aria-hidden="true"></i></button>
         </form>
         <div class="social-links">
           <a href="https://github.com/mmarcheterre" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
@@ -234,10 +293,12 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="footer">
-    <p>© 2026 M. Marcheterre — Développeur web à Montréal</p>
+    <p>© 2026 Marian Marcheterre · Développeur Web Full-Stack · Montréal, Québec</p>
+    <p class="footer-sub">Fait avec passion et beaucoup de café ☕</p>
   </footer>
 
   <script src="script.js"></script>
