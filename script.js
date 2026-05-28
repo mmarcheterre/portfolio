@@ -1,27 +1,34 @@
-// Hamburger menu
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.querySelector('.nav-links');
-hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
 
-// Close menu on link click
+if (hamburger && navLinks) {
+  hamburger.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', String(isOpen));
+  });
+}
+
 document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => navLinks.classList.remove('open'));
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  });
 });
 
-// Navbar shadow on scroll
 window.addEventListener('scroll', () => {
   const navbar = document.getElementById('navbar');
+  if (!navbar) return;
   navbar.style.boxShadow = window.scrollY > 50
     ? '0 4px 20px rgba(0,0,0,0.25)'
     : '0 2px 12px rgba(0,0,0,0.15)';
 });
 
-// Fade-in sections on scroll
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.style.opacity = '1';
       entry.target.style.transform = 'translateY(0)';
+      observer.unobserve(entry.target);
     }
   });
 }, { threshold: 0.1 });

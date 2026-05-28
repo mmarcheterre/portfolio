@@ -3,13 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de M. Marcheterre, développeur web full-stack basé à Montréal. Projets Flask, APIs, interfaces web et solutions modernes.">
+  <meta name="theme-color" content="#1e3c72">
+  <meta property="og:title" content="M. Marcheterre — Portfolio">
+  <meta property="og:description" content="Développeur web full-stack à Montréal. Découvrez mes projets, compétences et expériences.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mmarcheterre.github.io/portfolio/">
   <title>M. Marcheterre — Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
 
-  <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
     <span class="logo">M.Marcheterre</span>
     <ul class="nav-links">
@@ -19,15 +29,14 @@
       <li><a href="#projects">Projets</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
-      <i class="fas fa-bars"></i>
+    <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-navigation">
+      <i class="fas fa-bars" aria-hidden="true"></i>
     </button>
   </nav>
 
-  <!-- HERO -->
   <header class="hero" id="home">
     <div class="hero-content">
-      <div class="hero-avatar">
+      <div class="hero-avatar" aria-hidden="true">
         <span class="avatar-initials">M.M</span>
       </div>
       <p class="hero-subtitle">Développeur Web Full-Stack</p>
@@ -39,41 +48,38 @@
       </div>
     </div>
     <div class="hero-scroll">
-      <a href="#about"><i class="fas fa-chevron-down"></i></a>
+      <a href="#about" aria-label="Descendre vers la section À propos"><i class="fas fa-chevron-down" aria-hidden="true"></i></a>
     </div>
   </header>
 
-  <main>
-
-    <!-- À PROPOS -->
+  <main id="main-content">
     <section id="about" class="section">
       <div class="section-inner">
         <h2 class="section-title">À propos</h2>
         <div class="about-grid">
           <div class="about-text">
             <p>
-              Je suis développeur web full-stack basé à Montréal, spécialisé en <strong>Python Flask</strong>, 
-              <strong>JavaScript</strong> et intégration d'APIs REST. J'aime créer des applications web propres, 
+              Je suis développeur web full-stack basé à Montréal, spécialisé en <strong>Python Flask</strong>,
+              <strong>JavaScript</strong> et intégration d'APIs REST. J'aime créer des applications web propres,
               performantes et accessibles.
             </p>
             <p>
               En dehors du code, j'étudie, je construis et développe des projets qui combinent sport, technologie et autres.
             </p>
-            <a href="#" class="btn btn-primary" style="margin-top:1rem">Télécharger mon CV</a>
+            <a href="cv.pdf" class="btn btn-primary about-cta" target="_blank" rel="noopener">Télécharger mon CV</a>
           </div>
           <div class="about-info">
             <ul class="info-list">
-              <li><i class="fas fa-map-marker-alt"></i> Montréal, Québec</li>
-              <li><i class="fas fa-envelope"></i> ymarcheterre@gmail.com</li>
-              <li><i class="fab fa-github"></i> <a href="https://github.com/mmarcheterre" target="_blank">mmarcheterre</a></li>
-              <li><i class="fas fa-briefcase"></i> Disponible pour projets</li>
+              <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Montréal, Québec</li>
+              <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:ymarcheterre@gmail.com">ymarcheterre@gmail.com</a></li>
+              <li><i class="fab fa-github" aria-hidden="true"></i> <a href="https://github.com/mmarcheterre" target="_blank" rel="noopener">mmarcheterre</a></li>
+              <li><i class="fas fa-briefcase" aria-hidden="true"></i> Disponible pour projets</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- COMPÉTENCES -->
     <section id="skills" class="section section-alt">
       <div class="section-inner">
         <h2 class="section-title">Compétences</h2>
@@ -106,7 +112,6 @@
       </div>
     </section>
 
-    <!-- EXPÉRIENCE -->
     <section id="experience" class="section">
       <div class="section-inner">
         <h2 class="section-title">Expérience</h2>
@@ -117,7 +122,7 @@
               <span class="timeline-date">2024 – Présent</span>
               <h3>Développeur Web Full-Stack</h3>
               <p class="timeline-company">Projets personnels & open source</p>
-              <p>Conception et développement de plusieurs applications web (Flask, APIs sportives, sites vitrine).</p>
+              <p>Conception et développement de plusieurs applications web, dont des projets Flask, des intégrations d'API et des sites vitrine.</p>
             </div>
           </div>
           <div class="timeline-item">
@@ -142,79 +147,72 @@
       </div>
     </section>
 
-    <!-- PROJETS -->
     <section id="projects" class="section section-alt">
       <div class="section-inner">
         <h2 class="section-title">Projets</h2>
         <div class="projects-grid">
-
           <article class="card">
-            <div class="card-icon"><i class="fas fa-hockey-puck"></i></div>
+            <div class="card-icon"><i class="fas fa-hockey-puck" aria-hidden="true"></i></div>
             <h3>CH Dashboard</h3>
-            <p>Tableau de bord statistiques du Canadien de Montréal. Intègre l'API NHL, Flask, et une interface dynamique.</p>
+            <p>Tableau de bord statistiques du Canadien de Montréal. Intègre l'API NHL, Flask et une interface dynamique.</p>
             <div class="card-tags">
               <span>Python</span><span>Flask</span><span>NHL API</span>
             </div>
             <div class="card-links">
-              <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
-              <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+              <a href="https://github.com/mmarcheterre/ch-dashboard" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
             </div>
           </article>
 
           <article class="card">
-            <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+            <div class="card-icon"><i class="fas fa-shield-alt" aria-hidden="true"></i></div>
             <h3>Site CSDR</h3>
             <p>Site vitrine pour une entreprise de sécurité locale. Responsive, optimisé et mis en ligne sur Render.</p>
             <div class="card-tags">
-              <span>HTML</span><span>CSS</span><span>JS</span>
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
             </div>
             <div class="card-links">
-              <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
-              <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+              <a href="https://github.com/mmarcheterre/csdr" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
             </div>
           </article>
 
           <article class="card">
-            <div class="card-icon"><i class="fas fa-code"></i></div>
+            <div class="card-icon"><i class="fas fa-code" aria-hidden="true"></i></div>
             <h3>Portfolio</h3>
-            <p>Ce site même — conçu et développé en HTML/CSS vanilla, hébergé sur GitHub Pages.</p>
+            <p>Ce site même, conçu et développé en HTML, CSS et JavaScript vanilla, prêt pour GitHub Pages.</p>
             <div class="card-tags">
-              <span>HTML</span><span>CSS</span><span>GitHub Pages</span>
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span>
             </div>
             <div class="card-links">
-              <a href="https://github.com/mmarcheterre/portfolio" target="_blank"><i class="fab fa-github"></i> Code</a>
+              <a href="https://github.com/mmarcheterre/portfolio" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
             </div>
           </article>
-
         </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
     <section id="contact" class="section">
       <div class="section-inner contact-inner">
         <h2 class="section-title">Contact</h2>
-        <p class="contact-desc">Intéressé à collaborer ? N'hésite pas à m'écrire !</p>
-        <form class="contact-form" action="#" method="POST">
+        <p class="contact-desc">Intéressé à collaborer ? N'hésite pas à m'écrire.</p>
+        <form class="contact-form" action="https://formspree.io/f/xanoyrwj" method="POST">
           <div class="form-row">
             <input type="text" name="name" placeholder="Votre nom" required>
             <input type="email" name="email" placeholder="Votre courriel" required>
           </div>
           <input type="text" name="subject" placeholder="Sujet" required>
           <textarea name="message" rows="5" placeholder="Votre message..." required></textarea>
-          <button type="submit" class="btn btn-primary">Envoyer <i class="fas fa-paper-plane"></i></button>
+          <button type="submit" class="btn btn-primary">Envoyer <i class="fas fa-paper-plane" aria-hidden="true"></i></button>
         </form>
         <div class="social-links">
-          <a href="https://github.com/mmarcheterre" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-          <a href="mailto:ymarcheterre@gmail.com" title="Courriel"><i class="fas fa-envelope"></i></a>
+          <a href="https://github.com/mmarcheterre" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+          <a href="mailto:ymarcheterre@gmail.com" title="Courriel"><i class="fas fa-envelope" aria-hidden="true"></i></a>
         </div>
       </div>
     </section>
-
   </main>
 
   <footer class="footer">
-    <p>© 2026 M. Marcheterre — Fait avec <i class="fas fa-heart" style="color:#e74c3c"></i> à Montréal</p>
+    <p>© 2026 M. Marcheterre — Fait avec <i class="fas fa-heart" style="color:#e74c3c" aria-hidden="true"></i> à Montréal</p>
   </footer>
 
   <script src="script.js"></script>
