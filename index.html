@@ -199,28 +199,19 @@
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <span class="timeline-date">2026 – Présent</span>
-              <h3>Développeur Web Full-Stack</h3>
-              <p class="timeline-company">Projets personnels & open source</p>
+              <span class="timeline-date">2024 — présent</span>
+              <h3 class="timeline-title">Développeur Web Full-Stack</h3>
+              <p class="timeline-company">Projets personnels &amp; open source</p>
               <p>Conception et développement de plusieurs applications web, dont des projets Flask, des intégrations d'API sportives et des sites vitrines.</p>
             </div>
           </div>
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <span class="timeline-date">2026</span>
-              <h3>Site Web — CSDR</h3>
-              <p class="timeline-company">Westbury, Estrie</p>
-              <p>Développement complet d'un site vitrine pour une entreprise locale de systèmes d'alarme et de sécurité.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <span class="timeline-date">Formation continue</span>
-              <h3>Développement Web & IA</h3>
-              <p class="timeline-company">Auto-formation avancée</p>
-              <p>Flask avancé, tests unitaires avec pytest, CI/CD via GitHub Actions, sécurité web et accessibilité WCAG.</p>
+              <span class="timeline-date">2023</span>
+              <h3 class="timeline-title">Formation autodidacte intensive</h3>
+              <p class="timeline-company">Python · Flask · JavaScript · HTML/CSS</p>
+              <p>Apprentissage structuré du développement web full-stack, avec projets pratiques et lecture approfondie de documentation technique.</p>
             </div>
           </div>
         </div>
@@ -232,8 +223,21 @@
       <div class="section-inner">
         <h2 class="section-title">Projets</h2>
         <div class="projects-grid">
+
           <article class="card featured-project">
             <div class="project-badge">Projet phare</div>
+            <div class="card-icon"><i class="fas fa-tasks" aria-hidden="true"></i></div>
+            <h3>Outil de gestion de projets</h3>
+            <p>Application web complète de gestion de projets en équipe — tableaux Kanban, tâches, notifications en temps réel via Socket.IO, authentification 2FA/TOTP, gestion des rôles et tableau de bord analytique.</p>
+            <div class="card-tags">
+              <span>Python</span><span>Flask</span><span>SQLAlchemy</span><span>Socket.IO</span><span>JavaScript</span><span>Bootstrap</span><span>pytest</span>
+            </div>
+            <div class="card-links">
+              <span class="card-tag-private"><i class="fas fa-lock" aria-hidden="true"></i> Dépôt privé</span>
+            </div>
+          </article>
+
+          <article class="card">
             <div class="card-icon"><i class="fas fa-hockey-puck" aria-hidden="true"></i></div>
             <h3>CH Dashboard</h3>
             <p>Tableau de bord statistique du Canadien de Montréal, avec intégration de l'API NHL et interface dynamique pensée pour une lecture rapide.</p>
@@ -262,38 +266,49 @@
               <a href="https://github.com/mmarcheterre/portfolio" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
             </div>
           </article>
+
         </div>
       </div>
     </section>
 
     <!-- CONTACT -->
     <section id="contact" class="section section-alt">
-      <div class="section-inner contact-inner">
-        <h2 class="section-title">Travaillons ensemble</h2>
+      <div class="section-inner">
+        <h2 class="section-title">Me contacter</h2>
         <p class="contact-desc">Tu as un projet web, une application Flask à développer ou une idée à concrétiser ? Je suis disponible — écris-moi directement.</p>
-        <form class="contact-form" action="https://formspree.io/f/xanoyrwj" method="POST">
+        <form class="contact-form" action="https://formspree.io/f/xeojggva" method="POST" novalidate>
           <div class="form-row">
-            <input type="text" name="name" placeholder="Votre nom" required autocomplete="name">
-            <input type="email" name="email" placeholder="Votre courriel" required autocomplete="email">
+            <div class="form-group">
+              <label for="name">Nom</label>
+              <input type="text" id="name" name="name" placeholder="Votre nom" required autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="email">Courriel</label>
+              <input type="email" id="email" name="email" placeholder="votre@courriel.com" required autocomplete="email">
+            </div>
           </div>
-          <input type="text" name="subject" placeholder="Sujet" required>
-          <textarea name="message" rows="5" placeholder="Décrivez votre projet ou votre besoin..." required></textarea>
-          <button type="submit" class="btn btn-primary">Envoyer le message <i class="fas fa-paper-plane" aria-hidden="true"></i></button>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea name="message" rows="5" placeholder="Décrivez votre projet ou votre besoin..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane" aria-hidden="true"></i> Envoyer</button>
+          <p class="form-note" aria-live="polite"></p>
         </form>
-        <div class="social-links">
-          <a href="https://github.com/mmarcheterre" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
-          <a href="mailto:ymarcheterre@gmail.com" title="Courriel"><i class="fas fa-envelope" aria-hidden="true"></i></a>
-        </div>
       </div>
     </section>
 
   </main>
 
   <footer class="footer">
-    <p>© 2026 Marian Marcheterre · Développeur Web Full-Stack · Montréal, Québec</p>
-    <p class="footer-sub">Fait avec passion et beaucoup de café</p>
+    <div class="footer-inner">
+      <p>© 2025 Marian Marcheterre · Fait avec ❤️ à Montréal</p>
+      <div class="footer-links">
+        <a href="https://github.com/mmarcheterre" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+        <a href="mailto:ymarcheterre@gmail.com" aria-label="Courriel"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+      </div>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
