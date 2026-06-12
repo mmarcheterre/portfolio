@@ -41,14 +41,9 @@ a:hover { text-decoration: underline; }
 .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 .hero-btns .btn i { margin-right: 0.4rem; }
 
-/* CHEVRON — bounce fluide */
+/* CHEVRON */
 .hero-scroll { position: absolute; bottom: 2.2rem; }
-.hero-scroll a {
-  color: rgba(255,255,255,0.65);
-  font-size: 1.4rem;
-  display: inline-flex;
-  animation: bounce 2.2s ease-in-out infinite;
-}
+.hero-scroll a { color: rgba(255,255,255,0.65); font-size: 1.4rem; display: inline-flex; animation: bounce 2.2s ease-in-out infinite; }
 @keyframes bounce {
   0%   { transform: translateY(0);   opacity: 0.65; }
   30%  { transform: translateY(6px); opacity: 1;    }
@@ -87,7 +82,7 @@ a:hover { text-decoration: underline; }
 .stat-number { font-size: 3.5rem; font-weight: 800; color: white; line-height: 1; }
 .stat-label { font-size: 0.9rem; color: rgba(255,255,255,0.75); font-weight: 500; text-transform: uppercase; letter-spacing: 1px; }
 
-/* TECH BANNER — défilement géré par JS (rAF) */
+/* TECH BANNER */
 .tech-banner { background: var(--primary-dark); padding: 1.1rem 0; overflow: hidden; position: relative; }
 .tech-track { display: flex; gap: 3rem; align-items: center; width: max-content; will-change: transform; }
 .tech-track span { color: rgba(255,255,255,0.75); font-size: 0.92rem; font-weight: 600; white-space: nowrap; display: flex; align-items: center; gap: 0.5rem; flex: 0 0 auto; }
@@ -120,27 +115,161 @@ a:hover { text-decoration: underline; }
 .timeline-company { font-size: 0.88rem; color: var(--text-light); margin-bottom: 0.4rem; font-style: italic; }
 .timeline-content p { color: var(--text-light); font-size: 0.95rem; }
 
-/* PROJECTS */
+/* =====================
+   PROJETS — GRILLE
+   ===================== */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
-.projects-grid .featured-project {
-  grid-column: 1 / -1; /* pleine largeur en haut */
+
+/* --- Carte commune --- */
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 1.8rem;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  position: relative;
+  border: 1px solid rgba(42,82,152,0.07);
 }
-.card { background: var(--card-bg); border-radius: var(--radius); padding: 1.8rem; box-shadow: var(--shadow); transition: transform var(--transition), box-shadow var(--transition); display: flex; flex-direction: column; gap: 0.8rem; position: relative; }
-.card:hover { transform: translateY(-4px); box-shadow: 0 14px 35px rgba(0,0,0,0.12); }
-.featured-project { border: 2px solid rgba(42,82,152,0.14); }
-.project-badge { position: absolute; top: 1rem; right: 1rem; background: rgba(42,82,152,0.1); color: var(--primary); padding: 0.3rem 0.7rem; border-radius: 999px; font-size: 0.74rem; font-weight: 700; }
-.card-icon { font-size: 2rem; color: var(--primary); }
-.card h3 { font-size: 1.2rem; }
-.card p { color: var(--text-light); font-size: 0.92rem; flex: 1; }
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.13);
+}
+
+/* --- Projet phare — carte héro pleine largeur --- */
+.featured-project {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 55%, #4776e6 100%);
+  color: white;
+  border: none;
+  padding: 2.8rem 3rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto auto auto;
+  column-gap: 2.2rem;
+  row-gap: 0;
+  align-items: start;
+}
+.featured-project:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(30,60,114,0.35);
+}
+
+/* Icône grande — colonne gauche */
+.featured-project .card-icon {
+  grid-column: 1;
+  grid-row: 1 / 5;
+  font-size: 3.8rem;
+  color: rgba(255,255,255,0.9);
+  align-self: center;
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  width: 84px;
+  height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Badge — col droite ligne 1 */
+.project-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(255,255,255,0.18);
+  color: white;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  width: fit-content;
+}
+.project-badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #7fff9a;
+  flex-shrink: 0;
+}
+.card:not(.featured-project) .project-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(42,82,152,0.1);
+  color: var(--primary);
+}
+.card:not(.featured-project) .project-badge::before { display: none; }
+
+.featured-project h3 {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: white;
+  line-height: 1.2;
+  margin-bottom: 0.6rem;
+}
+
+.featured-project p {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.97rem;
+  max-width: 70ch;
+  margin-bottom: 1.1rem;
+}
+
+/* Tags — blancs translucides */
+.featured-project .card-tags span {
+  background: rgba(255,255,255,0.15);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+/* Lien privé */
+.featured-project .card-tag-private {
+  color: rgba(255,255,255,0.65);
+}
+
+/* --- Cartes secondaires --- */
+.card:not(.featured-project) .card-icon {
+  font-size: 1.9rem;
+  color: var(--primary);
+  background: var(--bg-alt);
+  border-radius: 12px;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.card:not(.featured-project) h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.card:not(.featured-project) p {
+  color: var(--text-light);
+  font-size: 0.92rem;
+  flex: 1;
+}
+
+/* Tags communs */
 .card-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-.card-tags span { background: var(--bg-alt); padding: 0.25rem 0.7rem; border-radius: 20px; font-size: 0.78rem; }
-.card-links { display: flex; gap: 1rem; margin-top: 0.5rem; flex-wrap: wrap; }
-.card-links a { color: var(--primary); font-size: 0.88rem; display: flex; align-items: center; gap: 0.3rem; }
+.card-tags span { background: var(--bg-alt); padding: 0.25rem 0.7rem; border-radius: 20px; font-size: 0.78rem; font-weight: 500; color: var(--text); }
+
+/* Liens */
+.card-links { display: flex; gap: 1rem; margin-top: 0.4rem; flex-wrap: wrap; }
+.card-links a { color: var(--primary); font-size: 0.88rem; display: flex; align-items: center; gap: 0.3rem; font-weight: 500; }
 .card-links a:hover { color: var(--accent); text-decoration: none; }
+.card-tag-private { color: var(--text-light); font-size: 0.82rem; display: flex; align-items: center; gap: 0.3rem; font-style: italic; }
 
 /* CONTACT */
 .contact-desc { color: var(--text-light); margin-bottom: 2rem; font-size: 1.05rem; text-align: center; max-width: 600px; margin-left: auto; margin-right: auto; }
@@ -152,7 +281,6 @@ a:hover { text-decoration: underline; }
 .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(42,82,152,0.15); }
 .contact-form button { align-self: flex-start; }
 .form-note { font-size: 0.85rem; color: var(--text-light); text-align: center; min-height: 1.4em; }
-.card-tag-private { color: var(--text-light); font-size: 0.82rem; display: flex; align-items: center; gap: 0.3rem; font-style: italic; }
 
 /* SOCIAL */
 .social-links { display: flex; gap: 1.5rem; justify-content: center; margin-top: 2rem; }
@@ -174,7 +302,9 @@ a:hover { text-decoration: underline; }
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .projects-grid { grid-template-columns: 1fr 1fr; }
-  .projects-grid .featured-project { grid-column: 1 / -1; }
+  .projects-grid .featured-project { grid-column: 1 / -1; padding: 2rem; }
+  .featured-project { grid-template-columns: 1fr; }
+  .featured-project .card-icon { grid-row: auto; width: 64px; height: 64px; font-size: 2.8rem; }
 }
 
 @media (max-width: 768px) {
@@ -185,7 +315,7 @@ a:hover { text-decoration: underline; }
   .services-grid { grid-template-columns: 1fr; }
   .skills-grid { grid-template-columns: 1fr; }
   .projects-grid { grid-template-columns: 1fr; }
-  .projects-grid .featured-project { grid-column: 1 / -1; }
+  .projects-grid .featured-project { grid-column: 1 / -1; padding: 1.8rem; }
   .form-row { grid-template-columns: 1fr; }
   .contact-form button { align-self: stretch; width: 100%; }
   .footer-inner { flex-direction: column; text-align: center; }
