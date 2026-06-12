@@ -70,3 +70,49 @@ document.querySelectorAll('.card, .timeline-item, .skill-category, .service-card
   el.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
   fadeObserver.observe(el);
 });
+
+// -------------------------------------------------------
+// TECH BANNER — défilement fluide via requestAnimationFrame
+// Principe : on duplique les items, on défile jusqu'à la
+// moitié exacte (en px), puis on remet à 0 sans saut.
+// -------------------------------------------------------
+(function initTechBanner() {
+  const track = document.querySelector('.tech-track');
+  if (!track) return;
+
+  // Supprimer les doublons HTML existants (on gère tout en JS)
+  const originalItems = Array.from(track.children);
+  const half = originalItems.length / 2;
+  // Garder seulement le premier set si déjà doublé dans le HTML
+  const items = originalItems.slice(0, half > 0 ? half : originalItems.length);
+  track.innerHTML = '';
+  items.forEach(el => track.appendChild(el));
+
+  // Cloner pour boucle infinie
+  items.forEach(el => track.appendChild(el.cloneNode(true)));
+
+  // Attendre que le layout soit calculé
+  requestAnimationFrame(() => {
+    const singleSetWidth = track.scrollWidth / 2; // largeur exacte d'un set
+    let offset = 0;
+    const speed = 0.5; // px par frame (~30s pour traverser)
+    let paused = false;
+
+    // Pause au survol
+    track.addEventListener('mouseenter', () => { paused = true; });
+    track.addEventListener('mouseleave', () => { paused = false; });
+
+    function tick() {
+      if (!paused) {
+        offset += speed;
+        if (offset >= singleSetWidth) {
+          offset -= singleSetWidth; // reset invisible
+        }
+        track.style.transform = `translateX(-${offset}px)`;
+      }
+      requestAnimationFrame(tick);
+    }
+
+    requestAnimationFrame(tick);
+  });
+})();
