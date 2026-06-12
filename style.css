@@ -40,9 +40,9 @@ a:hover { text-decoration: underline; }
 .hero-desc { font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin: 0 auto 2.2rem; }
 .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 .hero-btns .btn i { margin-right: 0.4rem; }
-.hero-scroll { position: absolute; bottom: 2.2rem; animation: bounce 2s infinite; }
-.hero-scroll a { color: rgba(255,255,255,0.65); font-size: 1.4rem; }
-@keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
+.hero-scroll { position: absolute; bottom: 2.2rem; }
+.hero-scroll a { color: rgba(255,255,255,0.65); font-size: 1.4rem; display: inline-flex; will-change: transform; transform: translate3d(0,0,0); animation: bounce 1.8s cubic-bezier(0.22, 1, 0.36, 1) infinite; }
+@keyframes bounce { 0%, 100% { transform: translate3d(0, 0, 0); } 50% { transform: translate3d(0, 6px, 0); } }
 
 /* BUTTONS */
 .btn { display: inline-block; padding: 0.82rem 1.9rem; border-radius: 999px; font-weight: 600; font-size: 0.95rem; transition: all var(--transition); cursor: pointer; border: none; }
@@ -76,11 +76,11 @@ a:hover { text-decoration: underline; }
 .stat-label { font-size: 0.9rem; color: rgba(255,255,255,0.75); font-weight: 500; text-transform: uppercase; letter-spacing: 1px; }
 
 /* TECH BANNER */
-.tech-banner { background: var(--primary-dark); padding: 1.1rem 0; overflow: hidden; }
-.tech-track { display: flex; gap: 3rem; width: max-content; animation: scroll-tech 20s linear infinite; align-items: center; }
-.tech-track span { color: rgba(255,255,255,0.75); font-size: 0.92rem; font-weight: 600; white-space: nowrap; display: flex; align-items: center; gap: 0.5rem; }
-.tech-track span i { font-size: 1.1rem; }
-@keyframes scroll-tech { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+.tech-banner { background: var(--primary-dark); padding: 1.1rem 0; overflow: hidden; position: relative; }
+.tech-track { display: flex; gap: 3rem; width: max-content; align-items: center; will-change: transform; backface-visibility: hidden; transform: translate3d(0,0,0); animation: scroll-tech 28s linear infinite; }
+.tech-track span { color: rgba(255,255,255,0.75); font-size: 0.92rem; font-weight: 600; white-space: nowrap; display: flex; align-items: center; gap: 0.5rem; flex: 0 0 auto; }
+.tech-track span i { font-size: 1.1rem; flex: 0 0 auto; }
+@keyframes scroll-tech { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-50%, 0, 0); } }
 
 /* SERVICES */
 .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
